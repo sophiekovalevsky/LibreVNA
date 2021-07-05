@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - include-version-artifacts
   pull_request:
     branches:
       - master
@@ -19,23 +20,35 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libusb-1.0-0-dev qt5-default qt5-qmake qtbase5-dev
           
+      - name: Get app version
+        id: id_version
+        run: |
+          cd Software/PC_Application
+          fw_major=`grep -oP '(?<=FW_MAJOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_minor=`grep -oP '(?<=FW_MINOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_patch=`grep -oP '(?<=FW_PATCH=)[0-9]+' LibreVNA-GUI.pro` 
+          echo "::set-output name=app_version::-v$fw_major.$fw_minor.$fw_patch"
+
       - name: Build application
         run: |
           cd Software/PC_Application
           qmake LibreVNA-GUI.pro
           make -j9
         shell: bash
-        
+
       - name: Upload artifact
+        env: 
+          LIBREVNA_VERSION: "${{steps.id_version.outputs.app_version}}"
         uses: actions/upload-artifact@v2
         with:
-          name: GUI_Ubuntu
+          name: LibreVNA-GUI-Ubuntu${{env.LIBREVNA_VERSION}}
           path: Software/PC_Application/LibreVNA-GUI
           
   PC_Application_Windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
+      - uses: msys2/setup-msys2@v2
 
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
@@ -50,6 +63,16 @@ jobs:
           Xcopy /E /I /Y libusb\include ..\Qt\5.15.1\mingw81_64\include
           Xcopy /E /I /Y libusb\MinGW64\static Software\PC_Application
         shell: cmd
+
+      - name: Get app version
+        id: id_version
+        shell: msys2 {0}
+        run: |
+          cd Software/PC_Application
+          fw_major=`grep -oP '(?<=FW_MAJOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_minor=`grep -oP '(?<=FW_MINOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_patch=`grep -oP '(?<=FW_PATCH=)[0-9]+' LibreVNA-GUI.pro` 
+          echo "::set-output name=app_version::-v$fw_major.$fw_minor.$fw_patch"
 
       - name: Build application
         run: |
@@ -71,8 +94,10 @@ jobs:
         
       - name: Upload
         uses: actions/upload-artifact@v2
+        env: 
+          LIBREVNA_VERSION: "${{steps.id_version.outputs.app_version}}"
         with:
-          name: GUI_Windows
+          name: GUI_Windows${{env.LIBREVNA_VERSION}}
           path: Software/PC_Application/release
 
   PC_Application_OSX:
@@ -88,6 +113,15 @@ jobs:
         run: |
           echo "/usr/local/opt/qt@5/bin" >> $GITHUB_PATH
           
+      - name: Get app version
+        id: id_version
+        run: |
+          cd Software/PC_Application
+          fw_major=`pcregrep -o '(?<=FW_MAJOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_minor=`pcregrep -o '(?<=FW_MINOR=)[0-9]+' LibreVNA-GUI.pro`
+          fw_patch=`pcregrep -o '(?<=FW_PATCH=)[0-9]+' LibreVNA-GUI.pro` 
+          echo "::set-output name=app_version::-v$fw_major.$fw_minor.$fw_patch"
+
       - name: Build application
         run: |
           cd Software/PC_Application
@@ -98,9 +132,11 @@ jobs:
         shell: bash
 
       - name: Upload artifact
+        env: 
+          LIBREVNA_VERSION: "${{steps.id_version.outputs.app_version}}"
         uses: actions/upload-artifact@v2
         with:
-          name: GUI_OSX
+          name: LibreVNA-GUI-OSX${{env.LIBREVNA_VERSION}}
           path: Software/PC_Application/LibreVNA-GUI.zip
           
   Embedded_Firmware:
@@ -111,7 +147,16 @@ jobs:
       - name: Install toolchain
         run: |
           sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi
-          
+        
+      - name: Get app version
+        id: id_version
+        run: |
+          cd Software/VNA_embedded
+          fw_major=`grep -oP '(?<=FW_MAJOR=)[0-9]+' Makefile`
+          fw_minor=`grep -oP '(?<=FW_MINOR=)[0-9]+' Makefile`
+          fw_patch=`grep -oP '(?<=FW_PATCH=)[0-9]+' Makefile` 
+          echo "::set-output name=app_version::-v$fw_major.$fw_minor.$fw_patch"
+
       - name: Build application
         run: |
           cd Software/VNA_embedded
@@ -126,8 +171,10 @@ jobs:
         
       - name: Upload
         uses: actions/upload-artifact@v2
+        env: 
+          LIBREVNA_VERSION: "${{steps.id_version.outputs.app_version}}"
         with:
-          name: EmbeddedFirmware
+          name: EmbeddedFirmware${{env.LIBREVNA_VERSION}}
           path: |
             VNA_embedded.elf
             combined.vnafw
