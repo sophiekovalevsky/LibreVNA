@@ -1,0 +1,11 @@
+VNA|VNA.kicad_sch||VNA|VNA
+FPGAMicrocontroller|FPGAMicrocontroller.kicad_sch||Microcontroller|VNA-Microcontroller
+FPGAConnections|FPGAConnections.kicad_sch||FPGA|VNA-FPGA
+ReferenceSignal|ReferenceSignal.kicad_sch||Reference Signal|VNA-Reference Signal
+PowerSupply|PowerSupply.kicad_sch||Power Supply|VNA-Power Supply
+AttenuatorSwitches|AttenuatorSwitches.kicad_sch||Attenuator Amp Switches|VNA-Attenuator Amp Switches
+LocalOsc2_RefClock|LocalOsc2_RefClock.kicad_sch||2.LO + Ref Clock|VNA-2.LO + Ref Clock
+LocalOsc1|LocalOsc1.kicad_sch||1.LO|VNA-1.LO
+Port1|Port1.kicad_sch||Port 1|VNA-Port 1
+HighFreqSource|HighFreqSource.kicad_sch||HF Source|VNA-HF Source
+Port2|Port2.kicad_sch||Port 2|VNA-Port 2

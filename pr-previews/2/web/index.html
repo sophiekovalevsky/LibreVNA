@@ -1,0 +1,1438 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script src="https://cdn.rawgit.com/ccampbell/mousetrap/825ce50c/mousetrap.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+		<link rel="stylesheet" href="kiri.css" integrity="">
+		<title>workspace</title>
+	</head>
+	<body>
+
+		<div id="server_offline" style="display: none;">
+		</div>
+
+		<div class="container fill no-gutters" style="background-color: #333; overflow-y: hidden; overflow-x: hidden; padding: 0px 10px 0px 10px; margin: 0px;">
+			<div class="row fill align-items-start no-gutters" style="overflow-y: hidden; overflow-x: hidden; padding: 0px 0px 0px 0px; margin: 0px;">
+				<div class="col align-self-start justify-content-start col-3 no-gutters" style="height: 100%; overflow-y: hidden; overflow-x: hidden; padding: 0px 0px 0px 0px; margin: 0px;">
+					<div class="list-group 3 no-gutters" style="padding: 0px 0px 0px 0px; margin: 0px 0px 0px 8px; height: 95%;">
+						<span style="margin-top: 1em"></span>
+						<h3 class="text-light" style="margin-left: 5px;">Kicad Revision Inspector</h3>
+						<div id="sch_title" style="display: inline; margin-left: 5px;">
+							<h4 class="text-warning text-bold" style="margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Sch | Root</h4>
+							<p class="text-light text-sm" >Rev. [rev] ([date])</p>
+						</div>
+						<div id="pcb_title" style="display: none; margin-left: 5px;">
+							<h4 class="text-info text-bold" style="margin-bottom: 0px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">PCB | LibreVNA Kicad PCB</h4>
+							<p class="text-light text-sm">Rev. [rev] ([date])</p>
+						</div>
+						<p class="text-light" >
+							<span style="margin-left:5px; margin-right:0.5em" class="iconify" data-icon="fa-solid:code-branch" data-inline="false"></span>
+							Commits
+						</p>
+						<div class="form-check scrollbox" style="padding: 0px 4px 8px 0px; margin: 0px; margin-right: 4px; overflow-y: scroll">
+							<form id="commits_form" class="overflow-auto scrollbox-content">
+								<!-- FILL_COMMITS_HERE -->
+								<!-- Commit 1 -->
+								<input class="chkGroup" type="checkbox" id="5cce5da" name="commit" value="5cce5da" onchange="update_commits()">
+								<label class="text-sm-left list-group-item" style="display: block; width: 445px; margin-left: 0px;" for="5cce5da">
+								    <table data-toggle="tooltip" title="<div>Commit: 5cce5da</br>Date: 2025-08-09</br>Author: Kiara Navarro </br>Description:</br>some tests (HEAD -> use-diff-on-ci, origin/use-diff-on-ci)</div>">
+								        <tr>
+								            <td rowspan=2 style="vertical-align: top; width: 1.8em;">
+								                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+								                    <path d="M7.5 10.5a3 3 0 010-6m0 6a3 3 0 000-6m0 6V15m0-10.5V0" stroke="currentColor"></path>
+								                </svg>
+								            </td>
+								            <td style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis;">
+								                <span class="text-muted"> 01 | </span> <span class="text-success font-weight-normal">5cce5da</span> <span class="text-muted"> | </span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #A6E22E;" data-inline="false"; data-icon="carbon:schematics"></span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #ff0000;" data-inline="false"; data-icon="bx:bx-x"></span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #888888;" data-inline="false"; data-icon="bi:file-earmark-text"></span> <span class="text-muted font-weight-normal"> | 2025-08-09 | Kiara Navarro </span>
+								            </td>
+								        </tr>
+								        <tr>
+								            <td>
+								                <em class="text-info" style=" line-height: 0.7;">some tests (HEAD -> use-diff-on-ci, origin/use-diff-on-ci)</em>
+								            </td>
+								        </tr>
+								    </table>
+								</label>
+								<!-- Commit 2 -->
+								<input class="chkGroup" type="checkbox" id="3483b7b" name="commit" value="3483b7b" onchange="update_commits()">
+								<label class="text-sm-left list-group-item" style="display: block; width: 445px; margin-left: 0px;" for="3483b7b">
+								    <table data-toggle="tooltip" title="<div>Commit: 3483b7b</br>Date: 2025-07-30</br>Author: Jan Käberich </br>Description:</br>Merge pull request #323 from HanfG/master (grafted, origin/master, origin/main, origin/HEAD, main)</div>">
+								        <tr>
+								            <td rowspan=2 style="vertical-align: top; width: 1.8em;">
+								                <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+								                    <path d="M7.5 10.5a3 3 0 010-6m0 6a3 3 0 000-6m0 6V15m0-10.5V0" stroke="currentColor"></path>
+								                </svg>
+								            </td>
+								            <td style="white-space:nowrap; overflow: hidden; text-overflow: ellipsis;">
+								                <span class="text-muted"> 02 | </span> <span class="text-success font-weight-normal">3483b7b</span> <span class="text-muted"> | </span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #A6E22E;" data-inline="false"; data-icon="carbon:schematics"></span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #F92672;" data-inline="false"; data-icon="codicon:circuit-board"></span> <span class="iconify" style="padding-left: 0px; padding-right: 0px; width: 14px; height: 14px; color: #888888;" data-inline="false"; data-icon="bi:file-earmark-text"></span> <span class="text-muted font-weight-normal"> | 2025-07-30 | Jan Käberich </span>
+								            </td>
+								        </tr>
+								        <tr>
+								            <td>
+								                <em class="text-info" style=" line-height: 0.7;">Merge pull request #323 from HanfG/master (grafted, origin/master, origin/main, origin/HEAD, main)</em>
+								            </td>
+								        </tr>
+								    </table>
+								</label>
+								
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col align-self-start justify-content-start col-7 no-gutters" style="background-color: #333; padding: 0px 0px 0px 0px; margin: 0px; height: 90vh;">
+
+					<div class="row no-gutters" style="width: 100%; padding: 0px 0px 0px 0px; margin: 0px;">
+
+						<div class="container no-gutters" style="width: 100%; flex: 1; padding: 0px 0px 0px 0px; margin: 0px;">
+
+							<div class="row no-gutters" style="width: 100%; margin: 0px 0px 0px 5px;">
+
+								<form class="inline" style="padding: 0px 0px 0px 0px; margin: 20px 0px 0px 10px;">
+									<div id="view_mode" class="form-group row btn-group btn-group-toggle" data-toggle="buttons" role="group" aria-label="View Mode">
+										<label id="show_sch_lbl" data-toggle="tooltip" title="Schematic View (s)" class="btn btn-secondary active" onclick="show_sch()">
+											<input id="show_sch" type="radio" name="view_mode" value="show_sch" checked>
+											<span class="iconify" style="width: 20px; height: 20px;" data-icon="carbon:schematics" data-inline="false"></span>
+										</label>
+										<label id="show_pcb_lbl" data-toggle="tooltip" title="Layout View (s)" class="btn btn-secondary" onclick="show_pcb()">
+											<input id="show_pcb" type="radio" name="view_mode" value="show_pcb" >
+											<span class="iconify" style="width: 20px; height: 20px;" data-icon="codicon:circuit-board" data-inline="false"></span>
+										</label>
+									</div>
+								</form>
+
+								<span style="width: 2em"></span>
+
+								<form class="inline" style="padding: 0px 0px 0px 0px; margin: 20px 0px 0px 20px;">
+									<div id="svg_controls" class="form-group btn-group btn-group-toggle" role="group" aria-label="Zoom Level">
+										<button id="zoom-in" data-toggle="tooltip" title="Zoom In (+)" name="svg_controls" type="button" aria-pressed="false" class="btn btn-secondary" onclick="this.blur();">
+										<span class="iconify" style="width: 20px; height: 20px;" data-icon="akar-icons:zoom-in" data-inline="false"></span>
+										</button>
+										<button id="zoom-out" data-toggle="tooltip" title="Zoom Out (-)" name="svg_controls" type="button" aria-pressed="false" class="btn btn-secondary" onclick="this.blur();" >
+										<span class="iconify" style="width: 20px; height: 20px;" data-icon="akar-icons:zoom-out" data-inline="false"></span>
+										</button>
+										<button id="zoom-fit" data-toggle="tooltip" title="Fit View (0)" name="svg_controls" type="button" aria-pressed="false" class="btn btn-secondary" onclick="this.blur();" >
+										<span class="iconify" style="width: 20px; height: 20px;" data-icon="carbon:center-to-fit" data-inline="false"></span>
+										</button>
+									</div>
+								</form>
+
+								<span style="width: 1em"></span>
+
+								<form class="inline" style="padding: 0px 0px 0px 0px; margin: 20px 0px 0px 20px;">
+									<div id="info_controls" class="form-group btn-group btn-group-toggle" role="group" aria-label="Info">
+										<button id="info-btn" data-toggle="modal" title="Info (i)" name="info_controls" type="button" aria-pressed="false" class="btn btn-secondary" data-target="#shortcuts-modal" onclick="this.blur();">
+											<span class="iconify" style="width: 20px; height: 20px;" data-icon="akar-icons:info" data-inline="false"></span>
+										</button>
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+					<div class="col no-gutters" style="width: 100%; padding: 0px 0px 0px 0px; margin: 0px; height: 100%; ">
+						<div class="col no-gutters" style="width: 100%; height: 90%; padding: 0px 0px 0px 0px; margin: 0px;">
+							<div id="legend" class="rounded no-gutters" style="background-color: #222; width: 100%; padding: 8px 5px 8px 5px; margin: 0px;">
+								<iframe name="hidden_post_target" class="hidden_iframe"></iframe>
+								<span id=commit1_legend style="margin-left:0.5em; margin-right:0.2em; color: #00FFFF; width: 10px; height: 10px;" class="iconify" data-icon="teenyicons-square-solid"></span>
+								<small id="commit1_legend_text" class="text-sm text-light">
+									Newest
+									<span class="text-monospace">
+										<form id="KICAD_COMMIT_1" class="form-inline" style="display: inline;" action="index.html" method="post" target="hidden_post_target">
+											<input id="commit1_hash" type="hidden" name="hash" value="[KICAD_COMMIT_1]">
+											<input id="commit1_kicad_pro_path" type="hidden" name="kicad_pro_path" value=".kiri/5cce5da/VNA.kicad_pro">
+											(<a data-toggle="tooltip" title="Launch Kicad at this Rev" id="commit1_legend_hash" href="javascript:{}" onclick="document.getElementById('KICAD_COMMIT_1').submit();">[COMMIT_1_HASH]</a>)
+										</form>
+									</span>
+								</small>
+								<span style="display: inline; width: 2em;"></span>
+								<span id="commit2_legend" style="display: inline; margin-left:1em; margin-right:0.2em; color: #880808; width: 10px; height: 10px;" class="iconify" data-icon="teenyicons-square-solid"></span>
+								<small id="commit2_legend_text" class="text-sm text-light">
+									Oldest
+									<span class="text-monospace">
+										<form id="KICAD_COMMIT_2" class="form-inline" style="display: inline;" action="index.html" method="post" target="hidden_post_target">
+											<input id="commit2_hash" type="hidden" name="hash" value="[KICAD_COMMIT_2]">
+											<input id="commit2_kicad_pro_path" type="hidden" name="kicad_pro_path" value=".kiri/3483b7b/VNA.kicad_pro">
+											(<a data-toggle="tooltip" title="Launch Kicad at this Rev" id="commit2_legend_hash" href="javascript:{}" onclick="document.getElementById('KICAD_COMMIT_2').submit();">[COMMIT_2_HASH]</a>)
+										</form>
+									</span>
+								</small>
+								<span id="commit3_legend" style="margin-left:1em; margin-right:0.2em; color: #807F7F; width: 10px; height: 10px;" class="iconify" data-icon="teenyicons-square-solid"></span>
+								<small id="commit3_legend_text" class="text-sm text-light">
+									Unchanged
+								</small>
+							</div>
+
+							<div id="diff-container" class="position-relative" style="height: 94%; padding: 0px">
+								<!-- SVGS_GOES_HERE -->
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="col align-self-start justify-content-start col-1 no-gutters" style="width: 100%; padding: 0px 0px 0px 0px; margin: 0px; height: 100vh;" >
+
+					<div class="list-group no-gutters" id="pages_list" style="display: inline;">
+						<div class="form-check no-gutters" style="width: 180px; padding-top: 1em">
+							<p class="text-light">
+								<span style="margin-right:0.5em; width: 20px; height: 20px;" class="iconify" data-icon="gridicons:next-page" data-inline="false"></span>
+								Pages
+							</p>
+							<div class="row" style="height: 85%; width: 300px;">
+								<div class="col" style="height: 100%; width: 100%">
+									<div id="pages_list_div" class="form-check scrollbox" style="height: 100%; width: 100%; padding: 0px 0px 8px 0px; margin: 0px; overflow-y: scroll; max-height: 90vh;">
+										<form id="pages_list_form" class="overflow-auto scrollbox-content">
+											<!-- FILL_PAGES_HERE -->
+											<!-- Page 1 -->
+											<input id="VNA" data-toggle="tooltip" title="VNA.kicad_sch" type="radio" value="VNA.kicad_sch" name="pages" checked="checked" onchange="change_page()">
+											<label for="VNA" data-toggle="tooltip" title="VNA.kicad_sch" id="label-VNA" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="VNA.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    VNA
+											</label>
+											<!-- Page 2 -->
+											<input id="FPGAMicrocontroller" data-toggle="tooltip" title="FPGAMicrocontroller.kicad_sch" type="radio" value="FPGAMicrocontroller.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="FPGAMicrocontroller" data-toggle="tooltip" title="FPGAMicrocontroller.kicad_sch" id="label-FPGAMicrocontroller" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="FPGAMicrocontroller.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    FPGAMicrocontroller
+											</label>
+											<!-- Page 3 -->
+											<input id="FPGAConnections" data-toggle="tooltip" title="FPGAConnections.kicad_sch" type="radio" value="FPGAConnections.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="FPGAConnections" data-toggle="tooltip" title="FPGAConnections.kicad_sch" id="label-FPGAConnections" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="FPGAConnections.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    FPGAConnections
+											</label>
+											<!-- Page 4 -->
+											<input id="ReferenceSignal" data-toggle="tooltip" title="ReferenceSignal.kicad_sch" type="radio" value="ReferenceSignal.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="ReferenceSignal" data-toggle="tooltip" title="ReferenceSignal.kicad_sch" id="label-ReferenceSignal" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="ReferenceSignal.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    ReferenceSignal
+											</label>
+											<!-- Page 5 -->
+											<input id="PowerSupply" data-toggle="tooltip" title="PowerSupply.kicad_sch" type="radio" value="PowerSupply.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="PowerSupply" data-toggle="tooltip" title="PowerSupply.kicad_sch" id="label-PowerSupply" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="PowerSupply.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    PowerSupply
+											</label>
+											<!-- Page 6 -->
+											<input id="AttenuatorSwitches" data-toggle="tooltip" title="AttenuatorSwitches.kicad_sch" type="radio" value="AttenuatorSwitches.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="AttenuatorSwitches" data-toggle="tooltip" title="AttenuatorSwitches.kicad_sch" id="label-AttenuatorSwitches" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="AttenuatorSwitches.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    AttenuatorSwitches
+											</label>
+											<!-- Page 7 -->
+											<input id="LocalOsc2_RefClock" data-toggle="tooltip" title="LocalOsc2_RefClock.kicad_sch" type="radio" value="LocalOsc2_RefClock.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="LocalOsc2_RefClock" data-toggle="tooltip" title="LocalOsc2_RefClock.kicad_sch" id="label-LocalOsc2_RefClock" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="LocalOsc2_RefClock.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    LocalOsc2_RefClock
+											</label>
+											<!-- Page 8 -->
+											<input id="LocalOsc1" data-toggle="tooltip" title="LocalOsc1.kicad_sch" type="radio" value="LocalOsc1.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="LocalOsc1" data-toggle="tooltip" title="LocalOsc1.kicad_sch" id="label-LocalOsc1" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="LocalOsc1.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    LocalOsc1
+											</label>
+											<!-- Page 9 -->
+											<input id="Port1" data-toggle="tooltip" title="Port1.kicad_sch" type="radio" value="Port1.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="Port1" data-toggle="tooltip" title="Port1.kicad_sch" id="label-Port1" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="Port1.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    Port1
+											</label>
+											<!-- Page 10 -->
+											<input id="HighFreqSource" data-toggle="tooltip" title="HighFreqSource.kicad_sch" type="radio" value="HighFreqSource.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="HighFreqSource" data-toggle="tooltip" title="HighFreqSource.kicad_sch" id="label-HighFreqSource" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="HighFreqSource.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    HighFreqSource
+											</label>
+											<!-- Page 11 -->
+											<input id="Port2" data-toggle="tooltip" title="Port2.kicad_sch" type="radio" value="Port2.kicad_sch" name="pages"  onchange="change_page()">
+											<label for="Port2" data-toggle="tooltip" title="Port2.kicad_sch" id="label-Port2" class="rounded text-sm-left list-group-item radio-box" onclick="change_page_onclick()" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+											    <span data-toggle="tooltip" title="Port2.kicad_sch" style="margin-left:0.5em; margin-right:0.1em;" class="iconify" data-icon="gridicons:pages" data-inline="false"></span>
+											    Port2
+											</label>
+											
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="list-group no-gutters" id="layers_list" style="display: none; height: 100%;">
+						<div class="form-check no-gutters" style="width: 180px; padding-top: 1em; height: 100%; ">
+							<p class="text-light">
+								<span style="margin-right:0.5em; width: 20px; height: 20px;" class="iconify" data-icon="teenyicons:layers-solid" data-inline="false"></span>
+								Layers
+							</p>
+							<div class="row" style="height: 85%; width: 300px;">
+								<div class="col" style="height: 100%; width: 100%">
+									<div id="layers_list_div" class="form-check scrollbox" style="height: 100%; width: 100%; padding: 0px 0px 8px 0px; margin: 0px; overflow-y: scroll; max-height: 90vh;">
+										<form id="layers_list_form" class="overflow-auto scrollbox-content">
+											<!-- FILL_LAYERS_HERE -->
+											<!-- Layer 1 -->
+											<input  id="layer-00" value="layer-F_Cu" type="radio" name="layers" onchange="change_layer()" checked='checked'>
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="0, F_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #952927" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Cu
+											</label>
+											<!-- Layer 2 -->
+											<input  id="layer-01" value="layer-F_Mask" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-01" id="label-layer-01" data-toggle="tooltip" title="1, F_Mask" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #C2C200" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Mask
+											</label>
+											<!-- Layer 3 -->
+											<input  id="layer-10" value="layer-In4_Cu" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-10" id="label-layer-10" data-toggle="tooltip" title="10, In4_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    In4_Cu
+											</label>
+											<!-- Layer 4 -->
+											<input  id="layer-11" value="layer-B_Adhesive" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-11" id="label-layer-11" data-toggle="tooltip" title="11, B_Adhesive" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Adhesive
+											</label>
+											<!-- Layer 5 -->
+											<input  id="layer-13" value="layer-F_Paste" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-13" id="label-layer-13" data-toggle="tooltip" title="13, F_Paste" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Paste
+											</label>
+											<!-- Layer 6 -->
+											<input  id="layer-15" value="layer-B_Paste" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-15" id="label-layer-15" data-toggle="tooltip" title="15, B_Paste" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Paste
+											</label>
+											<!-- Layer 7 -->
+											<input  id="layer-17" value="layer-User_Drawings" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-17" id="label-layer-17" data-toggle="tooltip" title="17, User_Drawings" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    User_Drawings
+											</label>
+											<!-- Layer 8 -->
+											<input  id="layer-19" value="layer-User_Comments" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-19" id="label-layer-19" data-toggle="tooltip" title="19, User_Comments" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    User_Comments
+											</label>
+											<!-- Layer 9 -->
+											<input  id="layer-02" value="layer-B_Cu" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-02" id="label-layer-02" data-toggle="tooltip" title="2, B_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #C200C2" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Cu
+											</label>
+											<!-- Layer 10 -->
+											<input  id="layer-25" value="layer-Edge_Cuts" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-25" id="label-layer-25" data-toggle="tooltip" title="25, Edge_Cuts" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Edge_Cuts
+											</label>
+											<!-- Layer 11 -->
+											<input  id="layer-27" value="layer-Margin" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-27" id="label-layer-27" data-toggle="tooltip" title="27, Margin" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Margin
+											</label>
+											<!-- Layer 12 -->
+											<input  id="layer-29" value="layer-B_Courtyard" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-29" id="label-layer-29" data-toggle="tooltip" title="29, B_Courtyard" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Courtyard
+											</label>
+											<!-- Layer 13 -->
+											<input  id="layer-03" value="layer-B_Mask" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-03" id="label-layer-03" data-toggle="tooltip" title="3, B_Mask" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #C20000" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Mask
+											</label>
+											<!-- Layer 14 -->
+											<input  id="layer-31" value="layer-F_Courtyard" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-31" id="label-layer-31" data-toggle="tooltip" title="31, F_Courtyard" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #359632" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Courtyard
+											</label>
+											<!-- Layer 15 -->
+											<input  id="layer-33" value="layer-B_Fab" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-33" id="label-layer-33" data-toggle="tooltip" title="33, B_Fab" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #A74AA8" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Fab
+											</label>
+											<!-- Layer 16 -->
+											<input  id="layer-35" value="layer-F_Fab" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-35" id="label-layer-35" data-toggle="tooltip" title="35, F_Fab" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #3DC9C9" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Fab
+											</label>
+											<!-- Layer 17 -->
+											<input  id="layer-04" value="layer-In1_Cu" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-04" id="label-layer-04" data-toggle="tooltip" title="4, In1_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: #0000C2" class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    In1_Cu
+											</label>
+											<!-- Layer 18 -->
+											<input  id="layer-05" value="layer-F_Silkscreen" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-05" id="label-layer-05" data-toggle="tooltip" title="5, F_Silkscreen" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Silkscreen
+											</label>
+											<!-- Layer 19 -->
+											<input  id="layer-06" value="layer-In2_Cu" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-06" id="label-layer-06" data-toggle="tooltip" title="6, In2_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    In2_Cu
+											</label>
+											<!-- Layer 20 -->
+											<input  id="layer-07" value="layer-B_Silkscreen" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-07" id="label-layer-07" data-toggle="tooltip" title="7, B_Silkscreen" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    B_Silkscreen
+											</label>
+											<!-- Layer 21 -->
+											<input  id="layer-08" value="layer-In3_Cu" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-08" id="label-layer-08" data-toggle="tooltip" title="8, In3_Cu" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    In3_Cu
+											</label>
+											<!-- Layer 22 -->
+											<input  id="layer-09" value="layer-F_Adhesive" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-09" id="label-layer-09" data-toggle="tooltip" title="9, F_Adhesive" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Adhesive
+											</label>
+											<!-- Layer 23 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="allow_soldermask_bridges_in_footprints, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 24 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="allow_two_segments, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 25 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="arc, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 26 -->
+											<input  id="layer-00" value="layer-114_7536" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="at, 114_7536" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    114_7536
+											</label>
+											<!-- Layer 27 -->
+											<input  id="layer-00" value="layer-smd" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="attr, smd" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    smd
+											</label>
+											<!-- Layer 28 -->
+											<input  id="layer-00" value="layer-138_5536" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="aux_axis_origin, 138_5536" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    138_5536
+											</label>
+											<!-- Layer 29 -->
+											<input  id="layer-00" value="layer-0_5" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="best_length_ratio, 0_5" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_5
+											</label>
+											<!-- Layer 30 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="best_width_ratio, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 31 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="bold, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 32 -->
+											<input  id="layer-00" value="layer-2_68" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="center, 2_68" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    2_68
+											</label>
+											<!-- Layer 33 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="clearance, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 34 -->
+											<input  id="layer-00" value="layer-White" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="color, White" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    White
+											</label>
+											<!-- Layer 35 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="connect_pads, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 36 -->
+											<input  id="layer-00" value="layer-None" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="copper_finish, None" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    None
+											</label>
+											<!-- Layer 37 -->
+											<input  id="layer-00" value="layer-not_allowed" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="copperpour, not_allowed" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    not_allowed
+											</label>
+											<!-- Layer 38 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="creategerberjobfile, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 39 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="crossoutdnponfab, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 40 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="curved_edges, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 41 -->
+											<input  id="layer-00" value="layer-12_000000" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dashed_line_dash_ratio, 12_000000" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    12_000000
+											</label>
+											<!-- Layer 42 -->
+											<input  id="layer-00" value="layer-3_000000" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dashed_line_gap_ratio, 3_000000" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    3_000000
+											</label>
+											<!-- Layer 43 -->
+											<input  id="layer-00" value="layer-SMD" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="descr, SMD" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    SMD
+											</label>
+											<!-- Layer 44 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dielectric_constraints, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 45 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="disableapertmacros, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 46 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="drill, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 47 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="drillshape, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 48 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dxfimperialunits, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 49 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dxfpolygonmode, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 50 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="dxfusepcbnewfont, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 51 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="effects, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 52 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="embedded_fonts, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 53 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="enabled, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 54 -->
+											<input  id="layer-00" value="layer--0_36" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="end, -0_36" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    -0_36
+											</label>
+											<!-- Layer 55 -->
+											<input  id="layer-00" value="layer-4_4" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="epsilon_r, 4_4" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    4_4
+											</label>
+											<!-- Layer 56 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fill, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 57 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="filled_areas_thickness, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 58 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="filled_polygon, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 59 -->
+											<input  id="layer-00" value="layer-0_9" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="filter_ratio, 0_9" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_9
+											</label>
+											<!-- Layer 60 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="font, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 61 -->
+											<input  id="layer-00" value="layer-Capacitor_SMD:C_0402_1005Metric" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="footprint, Capacitor_SMD:C_0402_1005Metric" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Capacitor_SMD:C_0402_1005Metric
+											</label>
+											<!-- Layer 62 -->
+											<input  id="layer-00" value="layer-allowed" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="footprints, allowed" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    allowed
+											</label>
+											<!-- Layer 63 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fp_circle, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 64 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fp_line, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 65 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fp_poly, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 66 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fp_rect, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 67 -->
+											<input  id="layer-00" value="layer-${REFERENCE}" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="fp_text, ${REFERENCE}" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    ${REFERENCE}
+											</label>
+											<!-- Layer 68 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="free, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 69 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="gr_line, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 70 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="gr_poly, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 71 -->
+											<input  id="layer-00" value="layer-TDO" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="gr_text, TDO" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    TDO
+											</label>
+											<!-- Layer 72 -->
+											<input  id="layer-00" value="layer-138_5536" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="grid_origin, 138_5536" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    138_5536
+											</label>
+											<!-- Layer 73 -->
+											<input  id="layer-00" value="layer-0_5" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hatch, 0_5" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_5
+											</label>
+											<!-- Layer 74 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hide, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 75 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hidednponfab, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 76 -->
+											<input  id="layer-00" value="layer-15_000000" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hpglpendiameter, 15_000000" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    15_000000
+											</label>
+											<!-- Layer 77 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hpglpennumber, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 78 -->
+											<input  id="layer-00" value="layer-20" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="hpglpenspeed, 20" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    20
+											</label>
+											<!-- Layer 79 -->
+											<input  id="layer-00" value="layer-10" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="island_area_min, 10" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    10
+											</label>
+											<!-- Layer 80 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="island_removal_mode, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 81 -->
+											<input  id="layer-00" value="layer-bottom" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="justify, bottom" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    bottom
+											</label>
+											<!-- Layer 82 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="keepout, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 83 -->
+											<input  id="layer-00" value="layer-F_SilkS" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="layer, F_SilkS" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_SilkS
+											</label>
+											<!-- Layer 84 -->
+											<input  id="layer-00" value="layer-F_Mask" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="layers, F_Mask" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    F_Mask
+											</label>
+											<!-- Layer 85 -->
+											<input  id="layer-00" value="layer-0x00000000_00000000_55555555_5755f5ff" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="layerselection, 0x00000000_00000000_55555555_5755f5ff" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0x00000000_00000000_55555555_5755f5ff
+											</label>
+											<!-- Layer 86 -->
+											<input  id="layer-00" value="layer-0_02" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="loss_tangent, 0_02" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_02
+											</label>
+											<!-- Layer 87 -->
+											<input  id="layer-00" value="layer-7628" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="material, 7628" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    7628
+											</label>
+											<!-- Layer 88 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="max_length, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 89 -->
+											<input  id="layer-00" value="layer-2" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="max_width, 2" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    2
+											</label>
+											<!-- Layer 90 -->
+											<input  id="layer-00" value="layer-87_618572" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="mid, 87_618572" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    87_618572
+											</label>
+											<!-- Layer 91 -->
+											<input  id="layer-00" value="layer-0_25" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="min_thickness, 0_25" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_25
+											</label>
+											<!-- Layer 92 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="mirror, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 93 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="mode, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 94 -->
+											<input  id="layer-00" value="layer-${KICAD8_3DMODEL_DIR}/Capacitor_SMD_3dshapes/C_0402_1005Metric_wrl" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="model, ${KICAD8_3DMODEL_DIR}/Capacitor_SMD_3dshapes/C_0402_1005Metric_wrl" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    ${KICAD8_3DMODEL_DIR}/Capacitor_SMD_3dshapes/C_0402_1005Metric_wrl
+											</label>
+											<!-- Layer 95 -->
+											<input  id="layer-00" value="layer-noGND" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="name, noGND" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    noGND
+											</label>
+											<!-- Layer 96 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="net, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 97 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="net_name, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 98 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="offset, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 99 -->
+											<input  id="layer-00" value="layer-Production/" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="outputdirectory, Production/" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Production/
+											</label>
+											<!-- Layer 100 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="outputformat, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 101 -->
+											<input  id="layer-00" value="layer-smd" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pad, smd" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    smd
+											</label>
+											<!-- Layer 102 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pad_to_mask_clearance, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 103 -->
+											<input  id="layer-00" value="layer-allowed" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pads, allowed" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    allowed
+											</label>
+											<!-- Layer 104 -->
+											<input  id="layer-00" value="layer-/be520179-012d-449b-b5ce-97a852bfda27/5b825fd4-ac08-40b7-80ca-d83f58dc9136" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="path, /be520179-012d-449b-b5ce-97a852bfda27/5b825fd4-ac08-40b7-80ca-d83f58dc9136" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    /be520179-012d-449b-b5ce-97a852bfda27/5b825fd4-ac08-40b7-80ca-d83f58dc9136
+											</label>
+											<!-- Layer 105 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pcbplotparams, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 106 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pdf_back_fp_property_popups, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 107 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pdf_front_fp_property_popups, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 108 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pdf_metadata, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 109 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pdf_single_document, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 110 -->
+											<input  id="layer-00" value="layer-GND" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pinfunction, GND" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    GND
+											</label>
+											<!-- Layer 111 -->
+											<input  id="layer-00" value="layer-passive" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pintype, passive" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    passive
+											</label>
+											<!-- Layer 112 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pintype_in, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 113 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pintype_out, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 114 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="placement, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 115 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="plot_black_and_white, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 116 -->
+											<input  id="layer-00" value="layer-0x00000000_00000000_00000000_00000000" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="plot_on_all_layers_selection, 0x00000000_00000000_00000000_00000000" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0x00000000_00000000_00000000_00000000
+											</label>
+											<!-- Layer 117 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="plotframeref, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 118 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="plotinvisibletext, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 119 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="plotpadnumbers, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 120 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="polygon, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 121 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="prefer_zone_connections, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 122 -->
+											<input  id="layer-00" value="layer-4" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="priority, 4" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    4
+											</label>
+											<!-- Layer 123 -->
+											<input  id="layer-00" value="layer-C122" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="property, C122" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    C122
+											</label>
+											<!-- Layer 124 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="psa4output, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 125 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="psnegative, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 126 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="pts, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 127 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="remove_unused_layers, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 128 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="rotate, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 129 -->
+											<input  id="layer-00" value="layer-0_25" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="roundrect_rratio, 0_25" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_25
+											</label>
+											<!-- Layer 130 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="scale, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 131 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="scaleselection, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 132 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="segment, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 133 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="setup, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 134 -->
+											<input  id="layer-00" value="layer-Port1_kicad_sch" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="sheetfile, Port1_kicad_sch" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Port1_kicad_sch
+											</label>
+											<!-- Layer 135 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="sheetname, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 136 -->
+											<input  id="layer-00" value="layer-1" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="size, 1" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    1
+											</label>
+											<!-- Layer 137 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="sketchdnponfab, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 138 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="sketchpadsonfab, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 139 -->
+											<input  id="layer-00" value="layer-0_1016" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="solder_mask_margin, 0_1016" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_1016
+											</label>
+											<!-- Layer 140 -->
+											<input  id="layer-00" value="layer--0_2" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="solder_paste_margin_ratio, -0_2" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    -0_2
+											</label>
+											<!-- Layer 141 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="stackup, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 142 -->
+											<input  id="layer-00" value="layer--0_36" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="start, -0_36" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    -0_36
+											</label>
+											<!-- Layer 143 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="stroke, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 144 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="subtractmaskfromsilk, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 145 -->
+											<input  id="layer-00" value="layer-4" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="svgprecision, 4" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    4
+											</label>
+											<!-- Layer 146 -->
+											<input  id="layer-00" value="layer-capacitor" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="tags, capacitor" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    capacitor
+											</label>
+											<!-- Layer 147 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="teardrop, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 148 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="teardrops, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 149 -->
+											<input  id="layer-00" value="layer-back" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="tenting, back" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    back
+											</label>
+											<!-- Layer 150 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="thermal_bridge_angle, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 151 -->
+											<input  id="layer-00" value="layer-0_5" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="thermal_bridge_width, 0_5" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_5
+											</label>
+											<!-- Layer 152 -->
+											<input  id="layer-00" value="layer-0_5" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="thermal_gap, 0_5" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_5
+											</label>
+											<!-- Layer 153 -->
+											<input  id="layer-00" value="layer-0_01524" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="thickness, 0_01524" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_01524
+											</label>
+											<!-- Layer 154 -->
+											<input  id="layer-00" value="layer-allowed" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="tracks, allowed" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    allowed
+											</label>
+											<!-- Layer 155 -->
+											<input  id="layer-00" value="layer-Silk" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="type, Silk" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    Silk
+											</label>
+											<!-- Layer 156 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="unlocked, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 157 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="useauxorigin, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 158 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="usegerberadvancedattributes, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 159 -->
+											<input  id="layer-00" value="layer-yes" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="usegerberattributes, yes" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    yes
+											</label>
+											<!-- Layer 160 -->
+											<input  id="layer-00" value="layer-no" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="usegerberextensions, no" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    no
+											</label>
+											<!-- Layer 161 -->
+											<input  id="layer-00" value="layer-0009dccd-5eed-4d21-92a5-19eeb4f92329" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="uuid, 0009dccd-5eed-4d21-92a5-19eeb4f92329" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0009dccd-5eed-4d21-92a5-19eeb4f92329
+											</label>
+											<!-- Layer 162 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="via, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 163 -->
+											<input  id="layer-00" value="layer-not_allowed" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="vias, not_allowed" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    not_allowed
+											</label>
+											<!-- Layer 164 -->
+											<input  id="layer-00" value="layer-0_12" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="width, 0_12" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0_12
+											</label>
+											<!-- Layer 165 -->
+											<input  id="layer-00" value="layer--1_57" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="xy, -1_57" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    -1_57
+											</label>
+											<!-- Layer 166 -->
+											<input  id="layer-00" value="layer-0" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="xyz, 0" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    0
+											</label>
+											<!-- Layer 167 -->
+											<input  id="layer-00" value="layer-" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="zone, " class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    
+											</label>
+											<!-- Layer 168 -->
+											<input  id="layer-00" value="layer-2" type="radio" name="layers" onchange="change_layer()" >
+											<label for="layer-00" id="label-layer-00" data-toggle="tooltip" title="zone_connect, 2" class="rounded text-sm-left list-group-item radio-box" onclick="change_layer_onclick()">
+											    <span style="margin-left:0.5em; margin-right:0.1em; color: " class="iconify" data-icon="teenyicons-square-solid" data-inline="false"></span>
+											    2
+											</label>
+											
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade text-light" id="shortcuts-modal" tabindex="-1" role="dialog" aria-labelledby="shortcuts-modal-title" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="shortcuts-modal-title">Shortcuts</h4>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<h5>Commits List</h5>
+
+						<table>
+							<tbody>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd><span class="iconify" data-icon="typcn-arrow-up" data-inline="false"></span></kbd></small></td>
+								<td>Move commits par upwards</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd><span class="iconify" data-icon="typcn-arrow-down" data-inline="false"></span></kbd></small></td>
+								<td>Move commits par downwards</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>[</kbd> or <kbd>Ctrl + <span class="iconify" data-icon="typcn-arrow-up" data-inline="false"></span></kbd></small></td>
+								<td>Move 2nd commit upwards</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>]</kbd> or <kbd>Ctrl + <span class="iconify" data-icon="typcn-arrow-down" data-inline="false"></span></kbd></small></td>
+								<td>Move 2nd commit downwards</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>r</kbd></small></td>
+								<td>Reset commit selection to the top 2 commits</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<hr class="hr_shortcuts">
+						<h5>View, sheets and layers</h5>
+
+						<table>
+							<tbody>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>s</kbd></small></td>
+								<td>Switch Schematic/Layout view</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>q</kbd></small></td>
+								<td>Toggle visibility of newest commit</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>w</kbd></small></td>
+								<td>Toggle visibility of oldest commit</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd><span class="iconify" data-icon="typcn-arrow-right" data-inline="false"></span></kbd></small></td>
+								<td>Select next page/layer</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd><span class="iconify" data-icon="typcn-arrow-left" data-inline="false"></span></kbd></small></td>
+								<td>Select previous page/layer</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Ctrl + <span class="iconify" data-icon="typcn-arrow-right" data-inline="false"></span></kbd></small></td>
+								<td>Select next page/layer (cycling)</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Ctrl + <span class="iconify" data-icon="typcn-arrow-left" data-inline="false"></span></kbd></small></td>
+								<td>Select previous page/layer (cycling)</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<hr class="hr_shortcuts">
+						<h5>Diff Pan and Zoom</h5>
+
+						<table>
+							<tbody>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>+</kbd></small></td>
+								<td>Zoom in</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>-</kbd></small></td>
+								<td>Zoom out</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>0</kbd></small></td>
+								<td>Zoom fit</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Alt + <span class="iconify" data-icon="typcn-arrow-up" data-inline="false"></span></kbd></small></td>
+								<td>Pan svg up</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Alt + <span class="iconify" data-icon="typcn-arrow-down" data-inline="false"></span></kbd></small></td>
+								<td>Pan svg down</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Alt + <span class="iconify" data-icon="typcn-arrow-left" data-inline="false"></span></kbd></small></td>
+								<td>Pan svg left</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>Alt + <span class="iconify" data-icon="typcn-arrow-right" data-inline="false"></span></kbd></small></td>
+								<td>Pan svg right</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<hr class="hr_shortcuts">
+						<h5>Miscellaneous</h5>
+
+						<table>
+							<tbody>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>f</kbd></small></td>
+								<td>Toggle full screen view</td>
+							</tr>
+							<tr>
+								<td class="shortcut_col"><small class="text-sm text-muted"><kbd>i</kbd></small></td>
+								<td>Shows this info view</td>
+							</tr>
+							</tbody>
+						</table>
+
+					</div>
+					<div class="modal-footer">
+						<small class="text-sm">
+							<a href="https://github.com/leoheck/kiri" target="_blank">Kicad Revision Inspector (KiRI)</a> by Leandro Heck
+						</small>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+		<script src="https://code.iconify.design/2/2.2.1/iconify.min.js" integrity=""></script>
+		<script src="https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js" integrity=""></script>
+		<script src="./kiri.js" integrity="" crossorigin="anonymous"></script>
+	</body>
+</html>
