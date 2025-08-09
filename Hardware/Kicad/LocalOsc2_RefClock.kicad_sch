@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "883e039f-11e4-4e72-a789-53d7e74b1c22")
 	(paper "A3")
 	(title_block
@@ -10,7 +10,9 @@
 	)
 	(lib_symbols
 		(symbol "Device:C"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0.254)
 			)
@@ -83,7 +85,7 @@
 			(symbol "C_0_1"
 				(polyline
 					(pts
-						(xy -2.032 -0.762) (xy 2.032 -0.762)
+						(xy -2.032 0.762) (xy 2.032 0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -95,7 +97,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.032 0.762) (xy 2.032 0.762)
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
 					)
 					(stroke
 						(width 0.508)
@@ -144,9 +146,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:FerriteBead"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -217,7 +222,7 @@
 			(symbol "FerriteBead_0_1"
 				(polyline
 					(pts
-						(xy 0 -1.27) (xy 0 -1.2192)
+						(xy -2.7686 0.4064) (xy -1.7018 2.2606) (xy 2.7686 -0.3048) (xy 1.6764 -2.159) (xy -2.7686 0.4064)
 					)
 					(stroke
 						(width 0)
@@ -241,7 +246,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.7686 0.4064) (xy -1.7018 2.2606) (xy 2.7686 -0.3048) (xy 1.6764 -2.159) (xy -2.7686 0.4064)
+						(xy 0 -1.27) (xy 0 -1.2192)
 					)
 					(stroke
 						(width 0)
@@ -290,11 +295,16 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:L"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 1.016)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -361,32 +371,8 @@
 			)
 			(symbol "L_0_1"
 				(arc
-					(start 0 -2.54)
-					(mid 0.6323 -1.905)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 0.635)
+					(start 0 2.54)
+					(mid 0.6323 1.905)
 					(end 0 1.27)
 					(stroke
 						(width 0)
@@ -398,8 +384,32 @@
 				)
 				(arc
 					(start 0 1.27)
-					(mid 0.6323 1.905)
-					(end 0 2.54)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
 					(stroke
 						(width 0)
 						(type default)
@@ -447,9 +457,12 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Device:R"
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
 				(offset 0)
 			)
@@ -568,6 +581,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "Oscillator:Si5351C-B-GM"
 			(exclude_from_sim no)
@@ -664,186 +678,6 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 22.86 270)
-					(length 2.54)
-					(name "VDDOB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 22.86 270)
-					(length 2.54)
-					(name "VDDOA"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 12.7 180)
-					(length 2.54)
-					(name "CLK1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 17.78 180)
-					(length 2.54)
-					(name "CLK0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 5.08 22.86 270)
-					(length 2.54)
-					(name "VDDOD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -17.78 180)
-					(length 2.54)
-					(name "CLK7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -12.7 180)
-					(length 2.54)
-					(name "CLK6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -7.62 180)
-					(length 2.54)
-					(name "CLK5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 22.86 270)
-					(length 2.54)
-					(name "VDDOC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 15.24 -2.54 180)
-					(length 2.54)
-					(name "CLK4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
 					(at -15.24 12.7 0)
 					(length 2.54)
@@ -862,71 +696,17 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -5.08 22.86 270)
-					(length 2.54)
-					(name "VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -22.86 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -15.24 -10.16 0)
-					(length 2.54)
-					(name "INTR"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin input line
-					(at -15.24 -7.62 0)
+					(at -15.24 5.08 0)
 					(length 2.54)
-					(name "SCL"
+					(name "CLKIN"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -953,16 +733,34 @@
 					)
 				)
 				(pin input line
-					(at -15.24 5.08 0)
+					(at -15.24 -7.62 0)
 					(length 2.54)
-					(name "CLKIN"
+					(name "SCL"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "6"
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -15.24 -10.16 0)
+					(length 2.54)
+					(name "INTR"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -981,6 +779,168 @@
 						)
 					)
 					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -5.08 22.86 270)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 22.86 270)
+					(length 2.54)
+					(name "VDDOA"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 22.86 270)
+					(length 2.54)
+					(name "VDDOB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -22.86 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 22.86 270)
+					(length 2.54)
+					(name "VDDOC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 5.08 22.86 270)
+					(length 2.54)
+					(name "VDDOD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 17.78 180)
+					(length 2.54)
+					(name "CLK0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "CLK1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "CLK2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1007,16 +967,70 @@
 					)
 				)
 				(pin output line
-					(at 15.24 7.62 180)
+					(at 15.24 -2.54 180)
 					(length 2.54)
-					(name "CLK2"
+					(name "CLK4"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "9"
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -7.62 180)
+					(length 2.54)
+					(name "CLK5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -12.7 180)
+					(length 2.54)
+					(name "CLK6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -17.78 180)
+					(length 2.54)
+					(name "CLK7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1025,6 +1039,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:C-EU?{colon}2C0402"
 			(exclude_from_sim no)
@@ -1085,17 +1100,6 @@
 			)
 			(symbol "C-EU?{colon}2C0402_1_0"
 				(rectangle
-					(start -2.032 -2.032)
-					(end 2.032 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
 					(start -2.032 -1.016)
 					(end 2.032 -0.508)
 					(stroke
@@ -1106,9 +1110,20 @@
 						(type outline)
 					)
 				)
+				(rectangle
+					(start -2.032 -2.032)
+					(end 2.032 -1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
-						(xy 0 -2.54) (xy 0 -2.032)
+						(xy 0 0) (xy 0 -0.508)
 					)
 					(stroke
 						(width 0.1524)
@@ -1120,7 +1135,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 -0.508)
+						(xy 0 -2.54) (xy 0 -2.032)
 					)
 					(stroke
 						(width 0.1524)
@@ -1167,6 +1182,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:FERRITE"
 			(exclude_from_sim no)
@@ -1274,6 +1290,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:INDUCTOR0402"
 			(exclude_from_sim no)
@@ -1381,6 +1398,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:KXO-TCXO-CMOS-86"
 			(exclude_from_sim no)
@@ -1442,7 +1460,7 @@
 			(symbol "KXO-TCXO-CMOS-86_1_0"
 				(polyline
 					(pts
-						(xy -5.08 -3.175) (xy -2.54 -3.175)
+						(xy -5.08 1.016) (xy -2.54 1.016)
 					)
 					(stroke
 						(width 0.254)
@@ -1466,7 +1484,19 @@
 				)
 				(polyline
 					(pts
-						(xy -5.08 1.016) (xy -2.54 1.016)
+						(xy -5.08 -3.175) (xy -2.54 -3.175)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.826 0.381) (xy -2.794 0.381)
 					)
 					(stroke
 						(width 0.254)
@@ -1502,10 +1532,10 @@
 				)
 				(polyline
 					(pts
-						(xy -4.826 0.381) (xy -2.794 0.381)
+						(xy -3.81 3.175) (xy -1.27 3.175)
 					)
 					(stroke
-						(width 0.254)
+						(width 0.1524)
 						(type solid)
 					)
 					(fill
@@ -1514,7 +1544,7 @@
 				)
 				(polyline
 					(pts
-						(xy -3.81 -3.175) (xy -3.81 -1.016)
+						(xy -3.81 1.016) (xy -3.81 3.175)
 					)
 					(stroke
 						(width 0.1524)
@@ -1538,19 +1568,7 @@
 				)
 				(polyline
 					(pts
-						(xy -3.81 1.016) (xy -3.81 3.175)
-					)
-					(stroke
-						(width 0.1524)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.81 3.175) (xy -1.27 3.175)
+						(xy -3.81 -3.175) (xy -3.81 -1.016)
 					)
 					(stroke
 						(width 0.1524)
@@ -1574,7 +1592,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 -5.08) (xy -1.27 3.175)
+						(xy -1.27 5.08) (xy 6.35 0)
 					)
 					(stroke
 						(width 0.4064)
@@ -1598,7 +1616,7 @@
 				)
 				(polyline
 					(pts
-						(xy -1.27 5.08) (xy 6.35 0)
+						(xy -1.27 -5.08) (xy -1.27 3.175)
 					)
 					(stroke
 						(width 0.4064)
@@ -1642,16 +1660,16 @@
 					)
 				)
 				(pin power_in line
-					(at 10.16 -5.08 180)
+					(at -10.16 5.08 0)
 					(length 2.54)
-					(name "GND/NC"
+					(name "VDD"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "1"
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1696,16 +1714,16 @@
 					)
 				)
 				(pin power_in line
-					(at -10.16 5.08 0)
+					(at 10.16 -5.08 180)
 					(length 2.54)
-					(name "VDD"
+					(name "GND/NC"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1727,6 +1745,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:R-EU_R0402"
 			(exclude_from_sim no)
@@ -1812,7 +1831,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 -0.889) (xy 2.54 0.889)
+						(xy 2.54 0.889) (xy -2.54 0.889)
 					)
 					(stroke
 						(width 0.254)
@@ -1824,7 +1843,7 @@
 				)
 				(polyline
 					(pts
-						(xy 2.54 0.889) (xy -2.54 0.889)
+						(xy 2.54 -0.889) (xy 2.54 0.889)
 					)
 					(stroke
 						(width 0.254)
@@ -1871,6 +1890,7 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "VNA:SMA_CONNECTOR"
 			(exclude_from_sim no)
@@ -1930,10 +1950,34 @@
 				)
 			)
 			(symbol "SMA_CONNECTOR_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0.508) (xy -0.762 0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(arc
-					(start -2.54 -2.54)
+					(start 0 -0.508)
 					(mid -0.9022 -1.9838)
-					(end 0 -0.508)
+					(end -2.54 -2.54)
+					(stroke
+						(width 0.3048)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -2.54 2.54)
+					(mid -0.9022 1.9838)
+					(end 0 0.508)
 					(stroke
 						(width 0.3048)
 						(type solid)
@@ -1944,7 +1988,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.54 0.508) (xy -0.762 0.508)
+						(xy -0.762 0.508) (xy -0.508 0)
 					)
 					(stroke
 						(width 0.254)
@@ -1968,31 +2012,7 @@
 				)
 				(polyline
 					(pts
-						(xy -0.762 0.508) (xy -0.508 0)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
 						(xy -0.508 0) (xy -0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type solid)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy -0.762 -1.778)
 					)
 					(stroke
 						(width 0.254)
@@ -2014,12 +2034,12 @@
 						(type none)
 					)
 				)
-				(arc
-					(start 0 0.508)
-					(mid -0.9022 1.9838)
-					(end -2.54 2.54)
+				(polyline
+					(pts
+						(xy 0 -2.54) (xy -0.762 -1.778)
+					)
 					(stroke
-						(width 0.3048)
+						(width 0.254)
 						(type solid)
 					)
 					(fill
@@ -2117,12 +2137,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2213,12 +2238,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:PWR_FLAG"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2309,12 +2339,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -2386,7 +2421,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -2398,7 +2433,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -2429,7 +2464,41 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "I2C address: 0xC0"
+		(exclude_from_sim no)
+		(at 155.702 124.206 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "2c220f3a-87af-47db-b362-604bae4812a5")
+	)
+	(text "40MHz lowpass"
+		(exclude_from_sim no)
+		(at 298.958 239.522 0)
+		(effects
+			(font
+				(size 5.08 4.318)
+			)
+			(justify left bottom)
+		)
+		(uuid "8fccff9b-a621-43a5-830b-b2df5c02bb0a")
+	)
+	(text "Up to 100mA"
+		(exclude_from_sim no)
+		(at 119.38 83.82 0)
+		(effects
+			(font
+				(size 1.778 1.5113)
+			)
+			(justify left bottom)
+		)
+		(uuid "d8ddc88b-0ed5-4f65-ada3-ff818b5878ec")
 	)
 	(junction
 		(at 278.13 158.75)
@@ -3687,42 +3756,8 @@
 		)
 		(uuid "fee1bb9e-4bbb-46c0-9db8-719e3fa50724")
 	)
-	(text "I2C address: 0xC0"
-		(exclude_from_sim no)
-		(at 155.702 124.206 0)
-		(effects
-			(font
-				(size 1.778 1.5113)
-			)
-			(justify left bottom)
-		)
-		(uuid "2c220f3a-87af-47db-b362-604bae4812a5")
-	)
-	(text "40MHz lowpass"
-		(exclude_from_sim no)
-		(at 298.958 239.522 0)
-		(effects
-			(font
-				(size 5.08 4.318)
-			)
-			(justify left bottom)
-		)
-		(uuid "8fccff9b-a621-43a5-830b-b2df5c02bb0a")
-	)
-	(text "Up to 100mA"
-		(exclude_from_sim no)
-		(at 119.38 83.82 0)
-		(effects
-			(font
-				(size 1.778 1.5113)
-			)
-			(justify left bottom)
-		)
-		(uuid "d8ddc88b-0ed5-4f65-ada3-ff818b5878ec")
-	)
 	(label "FPGA_CLK"
 		(at 161.29 165.1 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3733,7 +3768,6 @@
 	)
 	(label "CLK_XTAL_C"
 		(at 120.65 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -3744,7 +3778,6 @@
 	)
 	(label "CLK_OEB"
 		(at 116.84 162.56 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -3755,7 +3788,6 @@
 	)
 	(label "CLK_REFLO2"
 		(at 161.29 134.62 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3766,7 +3798,6 @@
 	)
 	(label "CLK_PORT2_LO2"
 		(at 161.29 149.86 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3777,7 +3808,6 @@
 	)
 	(label "SOURCE_REF"
 		(at 161.29 144.78 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3788,7 +3818,6 @@
 	)
 	(label "CLK_CLKIN"
 		(at 116.84 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -3799,7 +3828,6 @@
 	)
 	(label "CLK_PORT1LO2"
 		(at 161.29 139.7 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3810,7 +3838,6 @@
 	)
 	(label "CLKIN"
 		(at 77.47 142.24 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -3821,7 +3848,6 @@
 	)
 	(label "CLK_SOURCE_LB"
 		(at 161.29 129.54 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3832,7 +3858,6 @@
 	)
 	(label "CLKOUT"
 		(at 274.32 193.04 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3843,7 +3868,6 @@
 	)
 	(label "LO1_REF"
 		(at 161.29 154.94 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3854,7 +3878,6 @@
 	)
 	(label "CLK_CLKOUT"
 		(at 161.29 160.02 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3865,7 +3888,6 @@
 	)
 	(label "CLK_XTAL"
 		(at 111.76 116.84 0)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
@@ -3876,7 +3898,6 @@
 	)
 	(label "3V3_CLKGEN"
 		(at 147.32 107.95 90)
-		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 0.762 0.762)
