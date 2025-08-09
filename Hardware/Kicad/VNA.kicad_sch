@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "7469840a-34dd-443e-8d3c-7bb0beac8ed2")
 	(paper "A3")
 	(title_block
@@ -80,9 +80,46 @@
 				)
 			)
 			(symbol "Housing_0_1"
+				(polyline
+					(pts
+						(xy -5.715 0) (xy -0.635 0) (xy 3.175 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.715 0) (xy -5.715 -4.445) (xy -0.635 -4.445) (xy 3.175 -0.635) (xy 3.175 3.81) (xy -1.905 3.81)
+						(xy -5.715 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(rectangle
 					(start -5.08 -0.635)
 					(end -1.27 -1.905)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -4.5212 -1.5748) (xy -4.4704 -1.3716)
+					)
 					(stroke
 						(width 0)
 						(type default)
@@ -102,20 +139,9 @@
 						(type outline)
 					)
 				)
-				(circle
-					(center -1.905 -3.175)
-					(radius 0.635)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
 				(polyline
 					(pts
-						(xy -4.5212 -1.5748) (xy -4.4704 -1.3716)
+						(xy -4.4196 -1.2192) (xy -4.3688 -0.9652)
 					)
 					(stroke
 						(width 0)
@@ -128,18 +154,6 @@
 				(polyline
 					(pts
 						(xy -4.4196 -1.6764) (xy -4.064 -1.6764)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -4.4196 -1.2192) (xy -4.3688 -0.9652)
 					)
 					(stroke
 						(width 0)
@@ -211,7 +225,7 @@
 				)
 				(polyline
 					(pts
-						(xy -3.5052 -1.6764) (xy -3.1496 -1.6764)
+						(xy -3.5052 -1.2192) (xy -3.4544 -0.9652)
 					)
 					(stroke
 						(width 0)
@@ -223,7 +237,7 @@
 				)
 				(polyline
 					(pts
-						(xy -3.5052 -1.2192) (xy -3.4544 -0.9652)
+						(xy -3.5052 -1.6764) (xy -3.1496 -1.6764)
 					)
 					(stroke
 						(width 0)
@@ -295,7 +309,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.5908 -1.6764) (xy -2.2352 -1.6764)
+						(xy -2.5908 -1.2192) (xy -2.54 -0.9652)
 					)
 					(stroke
 						(width 0)
@@ -307,7 +321,7 @@
 				)
 				(polyline
 					(pts
-						(xy -2.5908 -1.2192) (xy -2.54 -0.9652)
+						(xy -2.5908 -1.6764) (xy -2.2352 -1.6764)
 					)
 					(stroke
 						(width 0)
@@ -365,6 +379,17 @@
 						(type none)
 					)
 				)
+				(circle
+					(center -1.905 -3.175)
+					(radius 0.635)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
 						(xy -0.635 0) (xy -0.635 -4.445)
@@ -377,32 +402,8 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy -5.715 0) (xy -0.635 0) (xy 3.175 3.81)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -5.715 0) (xy -5.715 -4.445) (xy -0.635 -4.445) (xy 3.175 -0.635) (xy 3.175 3.81) (xy -1.905 3.81)
-						(xy -5.715 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
 			)
+			(embedded_fonts no)
 		)
 	)
 	(symbol
@@ -536,6 +537,10 @@
 	(sheet
 		(at 20.955 102.87)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -577,6 +582,10 @@
 	(sheet
 		(at 20.955 113.665)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -618,6 +627,10 @@
 	(sheet
 		(at 20.955 92.075)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -659,6 +672,10 @@
 	(sheet
 		(at 20.32 19.05)
 		(size 13.97 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -700,6 +717,10 @@
 	(sheet
 		(at 20.955 59.69)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -741,6 +762,10 @@
 	(sheet
 		(at 20.955 39.37)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -782,6 +807,10 @@
 	(sheet
 		(at 19.685 29.21)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(stroke
 			(width 0)
 			(type solid)
@@ -822,6 +851,10 @@
 	(sheet
 		(at 20.955 69.85)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -863,6 +896,10 @@
 	(sheet
 		(at 20.955 48.895)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -904,6 +941,10 @@
 	(sheet
 		(at 20.955 81.28)
 		(size 12.7 3.81)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0)
@@ -947,4 +988,5 @@
 			(page "0")
 		)
 	)
+	(embedded_fonts no)
 )
